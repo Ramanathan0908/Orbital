@@ -6,7 +6,7 @@ app = Flask(__name__)
 # Create model
 model = SimpleT5() 
 # Load model parameters
-model.load_model("t5", "backend/simplet5model", use_gpu=True)
+model.load_model("t5", "../outputs/simplet5-epoch-2-train-loss-0.8114-val-loss-1.4894", use_gpu=True)
 
 @app.route('/summarize', methods=['POST'])
 def add():
