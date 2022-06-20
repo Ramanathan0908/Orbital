@@ -25,21 +25,16 @@ python3 -m pip install -r requirements.txt
 
 ## Usage
 
-1. Start Backend with:
-```
-yarn start-backend
-```
-
-2. Start Frontend with:
+1. Start App with:
 ```
 yarn start
 ```
 
-3. Type your input text into the text box and hit the SUMMARIZE button.
+2. Type your input text into the text box and hit the SUMMARIZE button.
 
 ![example](https://i.ibb.co/Fs8hYGq/Screenshot-from-2022-06-01-13-32-07.png)
 
-4. Hit the CLEAR button to reset.
+3. Hit the CLEAR button to reset.
 
 ## Credits
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
