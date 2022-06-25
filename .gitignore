@@ -1,3 +1,7 @@
 node_modules
 backend/__pycache__/
 yarn.lock
+.DS_Store
+.firebaserc
+backend/.DS_Store
+package-lock.json
