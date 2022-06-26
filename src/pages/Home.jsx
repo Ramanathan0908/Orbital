@@ -20,6 +20,7 @@ import CollectionsBookmarkIcon from '@mui/icons-material/CollectionsBookmark';
 import { styled, useTheme } from '@mui/material/styles';
 
 import Summarizer from './Summarizer';
+import Summaries from './Summaries';
 
 const drawerWidth = 240;
 
@@ -69,8 +70,9 @@ const DrawerHeader = styled('div')(({ theme }) => ({
 }));
 
 export default function Home() {
-    const theme = useTheme();
+  const theme = useTheme();
   const [open, setOpen] = React.useState(false);
+  const [section, setSection] = React.useState('summarize');
 
   const handleDrawerOpen = () => {
     setOpen(true);
@@ -78,6 +80,15 @@ export default function Home() {
 
   const handleDrawerClose = () => {
     setOpen(false);
+  }
+
+  const handleSectionChange = (newSection) => {
+    setSection(newSection);
+  }
+
+  const logout = () => {
+    localStorage.removeItem('AuthToken');
+    window.location.reload();
   }
 
   return (
@@ -96,7 +107,7 @@ export default function Home() {
           <Typography variant="h4" component="div" noWrap sx={{ flexGrow: 1 }}>
             Summarize
           </Typography>
-          <Button color="inherit">Logout</Button>
+          <Button color="inherit" onClick={logout}>Logout</Button>
         </Toolbar>
       </AppBar>
       <Drawer
@@ -119,16 +130,16 @@ export default function Home() {
         </DrawerHeader>
         <Divider />
         <List>
-          <ListItem key="Dashboard" disablePadding>
-            <ListItemButton>
+          <ListItem key="Summarize" disablePadding>
+            <ListItemButton onClick={() => handleSectionChange("summarize")}>
               <ListItemIcon>
                 <SummarizeIcon />
               </ListItemIcon>
               <ListItemText primary="Summarize" />
             </ListItemButton>
           </ListItem>
-          <ListItem key="bills" disablePadding>
-            <ListItemButton>
+          <ListItem key="SavedSummaries" disablePadding>
+            <ListItemButton onClick={() => handleSectionChange("savedSummaries")}>
               <ListItemIcon>
                 <CollectionsBookmarkIcon />
               </ListItemIcon>
@@ -139,7 +150,12 @@ export default function Home() {
       </Drawer>
       <Main open={open}>
         <DrawerHeader />
-        <Summarizer />
+        {
+            section === "savedSummaries" && (<Summaries />)
+        }
+        {
+            section === "summarize" && (<Summarizer />)
+        }
       </Main>
     </Box>
   );
