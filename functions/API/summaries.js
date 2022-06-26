@@ -3,6 +3,7 @@ const { db } = require('../util/admin');
 exports.getAllSummaries = (request, response) => {
     db
     .collection('summaries')
+    .where('email', '==', request.user.email)
     .orderBy('createdAt', 'desc')
     .get()
     .then((data) => {
@@ -33,6 +34,7 @@ exports.postOneSummary = (request, response) => {
     }
 
     const newSummaryItem = {
+        email: request.user.email,
         title: request.body.title,
         body: request.body.body,
         createdAt: new Date().toISOString()
@@ -52,12 +54,15 @@ exports.postOneSummary = (request, response) => {
     })
 }
 
-exports.deleteSummaty = (request, response) => {
+exports.deleteSummary = (request, response) => {
     const document = db.doc(`/summaries/${request.params.summaryId}`);
     document
     .get()
     .then((doc) => {
         if (!doc.exists) {
+            if(doc.data().username !== request.user.username){
+                return response.status(403).json({error:"UnAuthorized"})
+            }
             return response.status(404).json({ error: 'Summary not found' })
         }
         return document.delete();
