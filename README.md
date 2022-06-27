@@ -25,21 +25,23 @@ python3 -m pip install -r requirements.txt
 
 ## Usage
 
-1. Start Backend with:
-```
-yarn start-backend
-```
-
-2. Start Frontend with:
+1. Start App with:
 ```
 yarn start
 ```
 
+2. Enter login details. (The sign-in feature is currently incomplete so use the following username and password):
+
+```
+Username: foo@bar.com
+Password: password
+```
+
 3. Type your input text into the text box and hit the SUMMARIZE button.
 
-![example](https://i.ibb.co/Fs8hYGq/Screenshot-from-2022-06-01-13-32-07.png)
+4. Hit the CLEAR button to reset or hit the CREATE button to save.
 
-4. Hit the CLEAR button to reset.
+5. Go to `Saved Summaries` in the sidebar to view the previous summaries that were saved.
 
 ## Credits
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
