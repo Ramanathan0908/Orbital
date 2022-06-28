@@ -36,12 +36,21 @@ yarn start
 Username: foo@bar.com
 Password: password
 ```
+![login](https://i.ibb.co/XJptwCR/login.png)
 
 3. Type your input text into the text box and hit the SUMMARIZE button.
 
+![summarise](https://i.ibb.co/7CMZYJ3/summarise.png)
+
 4. Hit the CLEAR button to reset or hit the CREATE button to save.
 
-5. Go to `Saved Summaries` in the sidebar to view the previous summaries that were saved.
+5. When saving, enter the title of that summary.
+
+![save](https://i.ibb.co/NFfFGYd/save.png)
+
+5. Click the icon in the top left and go to `Saved Summaries` in the sidebar to view the previous saved summaries.
+
+![view](https://i.ibb.co/2dVwpTv/view.png)
 
 ## Credits
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
