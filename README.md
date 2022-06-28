@@ -1,4 +1,4 @@
-# Lorem Ipsum
+# toomanywords
 
 This project is an Artificial Intelligence-powered automatic text summary webapp.
 
