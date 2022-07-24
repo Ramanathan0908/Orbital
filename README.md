@@ -46,21 +46,29 @@ $ yarn start
 Username: foo@bar.com
 Password: password
 ```
-![login](https://i.ibb.co/XJptwCR/login.png)
+![login](https://i.ibb.co/2nf61yg/login.png)
 
-5. Type your input text into the text box and hit the SUMMARIZE button.
+5. Choose the word limit for the summary.
 
-![summarise](https://i.ibb.co/7CMZYJ3/summarise.png)
+![wordlimit](https://i.ibb.co/LSJR4jr/wordlimit.png)
 
-6. Hit the CLEAR button to reset or hit the CREATE button to save.
+6. Choose the type of text to be summarised from the drop-down list.
 
-7. When saving, enter the title of that summary.
+![type](https://i.ibb.co/Wyz5PP1/type.png)
 
-![save](https://i.ibb.co/NFfFGYd/save.png)
+7. Type your input text into the text box and hit the SUMMARIZE button.
 
-8. Click the icon in the top left and go to `Saved Summaries` in the sidebar to view the previous saved summaries.
+![summarise](https://i.ibb.co/kKqqPVK/summarise.png)
 
-![view](https://i.ibb.co/2dVwpTv/view.png)
+8. Hit the CLEAR button to reset or hit the CREATE button to save.
+
+9. When saving, enter the title of that summary.
+
+![save](https://i.ibb.co/1mNpQGd/save.png)
+
+10. Click the icon in the top left and go to `Saved Summaries` in the sidebar to view the previous saved summaries.
+
+![view](https://i.ibb.co/TtmLFPS/view.png)
 
 ## Credits
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
