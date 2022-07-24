@@ -25,12 +25,22 @@ python3 -m pip install -r requirements.txt
 
 ## Usage
 
-1. Start App with:
+1. Navigate to the `backend` folder with:
 ```
-yarn start
+$ cd backend
 ```
 
-2. Enter login details. (The sign-in feature is currently incomplete so use the following username and password):
+2. Start the backend with:
+```
+$ flask run --port=6969
+```
+
+3. **In another terminal window**, navigate to the repo folder and start the App with:
+```
+$ yarn start
+```
+
+4. Enter login details. (The sign-in feature is currently incomplete so use the following username and password):
 
 ```
 Username: foo@bar.com
@@ -38,17 +48,17 @@ Password: password
 ```
 ![login](https://i.ibb.co/XJptwCR/login.png)
 
-3. Type your input text into the text box and hit the SUMMARIZE button.
+5. Type your input text into the text box and hit the SUMMARIZE button.
 
 ![summarise](https://i.ibb.co/7CMZYJ3/summarise.png)
 
-4. Hit the CLEAR button to reset or hit the CREATE button to save.
+6. Hit the CLEAR button to reset or hit the CREATE button to save.
 
-5. When saving, enter the title of that summary.
+7. When saving, enter the title of that summary.
 
 ![save](https://i.ibb.co/NFfFGYd/save.png)
 
-5. Click the icon in the top left and go to `Saved Summaries` in the sidebar to view the previous saved summaries.
+8. Click the icon in the top left and go to `Saved Summaries` in the sidebar to view the previous saved summaries.
 
 ![view](https://i.ibb.co/2dVwpTv/view.png)
 
