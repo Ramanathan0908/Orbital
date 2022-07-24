@@ -25,17 +25,12 @@ python3 -m pip install -r requirements.txt
 
 ## Usage
 
-1. Navigate to the `backend` folder with:
+1. **In a terminal window**, Navigate to the repo folder and start the summarizer with yarn summarizer:
 ```
-$ cd backend
-```
-
-2. Start the backend with:
-```
-$ flask run --port=6969
+$ yarn summarizer
 ```
 
-3. **In another terminal window**, navigate to the repo folder and start the App with:
+2. **In another terminal window**, navigate to the repo folder and start the App with:
 ```
 $ yarn start
 ```
