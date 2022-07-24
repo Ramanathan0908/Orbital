@@ -1,14 +1,12 @@
-import time
 from flask import Flask, request, jsonify
 from transformers import pipeline
 
 app = Flask(__name__)
 
 models = {
-    'default': None,
     'news': "sshleifer/distilbart-cnn-12-6",
-    'paper': "google/pegasus-pubmed",
-    'book': "pszemraj/long-t5-tglobal-base-16384-book-summary"
+    'scientific paper': "google/bigbird-pegasus-large-arxiv",
+    'book': "pszemraj/led-large-book-summary"
 }
 
 @app.route('/summarize', methods=['POST'])

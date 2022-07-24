@@ -13,7 +13,7 @@ import { useNavigate } from 'react-router-dom';
 
 import { authMiddleware } from '../util/auth';
 
-const modesOfSummary = ['default', 'news', 'paper', 'book'];
+const modesOfSummary = ['news', 'scientific paper', 'book'];
 
 function Summarizer() {
   const navigate = useNavigate();
