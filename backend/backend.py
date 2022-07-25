@@ -16,7 +16,7 @@ def add():
     wordLimit = data['wordLimit']
     summaryMode = data['summaryMode']
     summariser = pipeline("summarization", model=models[summaryMode])
-    summary = summariser(content, max_length=wordLimit, min_length=30, do_sample=False)[0]['summary_text']
+    summary = summariser(content, max_length=int(wordLimit), min_length=30, do_sample=False)[0]['summary_text']
 
     return jsonify({ 'summary': summary })
 
